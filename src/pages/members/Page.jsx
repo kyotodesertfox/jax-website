@@ -13,10 +13,6 @@ export default function MembersPage() {
     .catch(err => console.error("Roster error:", err));
   }, []);
 
-  const MemberCard = ({ member }) => {
-    // Define which roles get the premium treatment
-    const isPremium = ["Fermentation Director", "Chief Hops Officer"].includes(member.role);
-
   // Pagination Logic
   const totalPages = Math.ceil(members.length / membersPerPage);
   const currentMembers = members.slice(
@@ -50,21 +46,31 @@ export default function MembersPage() {
     {/* Member Grid */}
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
     {currentMembers.map((member) => (
-      // 1. Logic check: Who gets the premium treatment?
-      const isPremium = ["Founder", "Chief Hops Officer", "Admin"].includes(member.role);
 
-      return (
-        <div
-        key={member.hash}
-        {/* 2. Added 'relative' and 'group' to handle the shine overlay */}
-        className={`bg-white border-2 rounded-xl p-6 shadow-sm hover:shadow-md transition-all relative group ${
-          isPremium ? 'border-[#FBB117]' : 'border-gray-200'
-        }`}
-        >
-        {/* 3. The Shine Overlay (Only for premium members) */}
-        {isPremium && (
-          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12 pointer-events-none z-20" />
-        )}
+      <div
+      key={member.hash}
+      className={`bg-white border-2 rounded-xl p-6 shadow-sm hover:shadow-md transition-all relative group ${member.isShiny ? 'border-[#FBB117]' : 'border-gray-200' }`}
+      >
+      {/* 2. The Shine Overlay - only renders if isShiny is true */}
+
+      {member.isShiny && (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-30">
+        {/* Large Corner Stars */}
+        <span className="absolute top-2 left-4 text-[#FBB117] text-2xl animate-intense" style={{ '--speed': '2s', animationDelay: '0.2s' }}>✦</span>
+        <span className="absolute bottom-4 right-4 text-[#FBB117] text-2xl animate-intense" style={{ '--speed': '2.5s', animationDelay: '1.2s' }}>✦</span>
+
+        {/* Mid-sized Scatter */}
+        <span className="absolute top-1/2 left-2 text-[#FBB117] text-lg animate-intense" style={{ '--speed': '1.8s', animationDelay: '0.5s' }}>✧</span>
+        <span className="absolute top-10 right-6 text-[#FBB117] text-lg animate-intense" style={{ '--speed': '3s', animationDelay: '2s' }}>✧</span>
+
+        {/* Small Twinkles */}
+        <span className="absolute bottom-16 left-10 text-[#FBB117] text-xs animate-intense" style={{ '--speed': '1.5s', animationDelay: '0.7s' }}>✦</span>
+        <span className="absolute top-1/3 right-1/4 text-[#FBB117] text-xs animate-intense" style={{ '--speed': '2.2s', animationDelay: '1.5s' }}>✦</span>
+
+        {/* The Extra "Pop" - A central glow that pulses */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#FBB117]/5 via-transparent to-[#FBB117]/10 animate-pulse" />
+        </div>
+      )}
 
       {/* Avatar */}
       <div className="flex justify-center mb-4">
