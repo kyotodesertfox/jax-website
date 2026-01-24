@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function HomePage() {
     return (
@@ -30,10 +31,15 @@ export default function HomePage() {
 
         {/* Call to Action Buttons */}
         <div className="mt-8 flex flex-wrap gap-4">
+
+        <Link to="/events" className="bg-[#FBB117] text-black font-black py-3 px-8 uppercase tracking-widest hover:bg-black hover:text-[#FBB117] transition-all duration-300 shadow-md">
+        View Event Calendar</Link>
+
+        { /*
         <a href="/events" className="bg-[#FBB117] text-black font-black py-3 px-8 uppercase tracking-widest hover:bg-black hover:text-[#FBB117] transition-all duration-300 shadow-md">
         View Event Calendar
         </a>
-        { /*}<a href="https://discord.gg/yourlink" target="_blank" rel="noreferrer" className="border-2 border-gray-900 text-gray-900 font-black py-3 px-8 uppercase tracking-widest hover:bg-gray-900 hover:text-white transition-all duration-300">
+        <a href="https://discord.gg/yourlink" target="_blank" rel="noreferrer" className="border-2 border-gray-900 text-gray-900 font-black py-3 px-8 uppercase tracking-widest hover:bg-gray-900 hover:text-white transition-all duration-300">
         Join Discord
         </a> */ }
         </div>
