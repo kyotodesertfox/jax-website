@@ -50,9 +50,19 @@ export default function EventsPage() {
                 <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">
                 Starts at {new Date(event.startTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}
                 </span>
-                <button className="text-sm font-bold text-[#FBB117] hover:underline">
-                View in Discord →
-                </button>
+
+                <div className="flex items-center gap-1.5 text-[#FBB117] text-[14px] font-bold uppercase whitespace-nowrap">
+                View on Discord (<a className="hover:underline" href={event.url} target="_blank" rel="noopener noreferrer">Web</a> |
+                <a className="hover:underline" href={event.app_url} target="_blank" rel="noopener noreferrer"><svg
+                width="18"
+                height="18"
+                viewBox="0 0 127.14 96.36"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.71,32.65-1.82,56.6.39,80.21a105.73,105.73,0,0,0,32.77,16.15,77.7,77.7,0,0,0,7.33-11.86,67.42,67.42,0,0,1-11.64-5.54c.9-.66,1.76-1.39,2.59-2.14a73.74,73.74,0,0,0,63.41,0c.83.75,1.69,1.48,2.59,2.14a67.05,67.05,0,0,1-11.65,5.54,76.69,76.69,0,0,0,7.36,11.89,105,105,0,0,0,32.79-16.15C129.92,52.45,120.34,28.98,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5.07-12.71,11.41-12.71S54,46,53.86,53,48.74,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5.07-12.71,11.41-12.71S96.1,46,96,53,90.89,65.69,84.69,65.69Z"/>
+                </svg></a>)
+                </div>
                 </div>
                 </div>
                 </div>

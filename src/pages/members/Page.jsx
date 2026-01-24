@@ -82,9 +82,6 @@ export default function MembersPage() {
 
       {/* Industrial Metadata */}
       <div className="mt-4 pt-4 border-t border-gray-100">
-      <div className="text-[9px] font-mono text-gray-400 uppercase tracking-widest">
-      REF: {member.hash.substring(0, 12)}
-      </div>
       <div className="text-[9px] font-black text-gray-400 uppercase tracking-widest mt-1">
       JOINED {member.joined}
       </div>
