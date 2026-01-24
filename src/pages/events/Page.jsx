@@ -4,7 +4,7 @@ import eventData from './events.json';
 
 export default function EventsPage() {
     return (
-        <div className="min-h-screen bg-gray-50 py-12 px-4">
+
         <div className="max-w-5xl mx-auto">
         {/* Header Section */}
         <header className="mb-12 border-b-4 border-[#FBB117] pb-4">
@@ -64,6 +64,6 @@ export default function EventsPage() {
         )}
         </div>
         </div>
-        </div>
+
     );
 }

@@ -27,7 +27,7 @@ export default function App() {
       <Route key={path} path={path} element={<Component />} />
     ))}
     {/* The 404 "Kicked Keg" Safety Net */}
-    <Route path="*" element={<div className="p-20 text-center font-black">404: KEG IS KICKED</div>} />
+    <Route path="*" element={<div className="p-20 text-center font-black"><img src={`${import.meta.env.BASE_URL}404.png`} className="w-full max-w-lg mx-auto" /></div>} />
     </Route>
     </Routes>
     </BrowserRouter>
