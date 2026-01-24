@@ -25,9 +25,11 @@ export default function Footer() {
         <a href="https://instagram.com/jacksonvillealeexchange/" className="hover:text-[#FBB117] transition-colors" title="Instagram">
         <span>📸</span>
         </a>
+        { /*}
         <a href="https://facebook.com/yourlink" className="hover:text-[#FBB117] transition-colors" title="Facebook">
         <span>👥</span>
         </a>
+        */ }
         </div>
         </div>
         </div>
