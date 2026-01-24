@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-beer-gold: #FBB117;
+  --color-beer-amber: #D48900;
+  --color-beer-foam: #F5F5F1;
+  --color-beer-dark: #2D1B09;
+}
