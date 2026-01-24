@@ -13,7 +13,7 @@ export default function Navbar() {
         <Beer size={24} className="text-beer-dark" />
         </div>
         <span className="text-beer-gold font-black text-xl tracking-tighter">
-        BREW<span className="text-white">LAB</span>
+        JAX <span className="text-white">ALE EXCHANGE</span>
         </span>
         </Link>
 
