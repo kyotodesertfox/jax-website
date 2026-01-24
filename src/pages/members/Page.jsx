@@ -13,6 +13,10 @@ export default function MembersPage() {
     .catch(err => console.error("Roster error:", err));
   }, []);
 
+  const MemberCard = ({ member }) => {
+    // Define which roles get the premium treatment
+    const isPremium = ["Fermentation Director", "Chief Hops Officer"].includes(member.role);
+
   // Pagination Logic
   const totalPages = Math.ceil(members.length / membersPerPage);
   const currentMembers = members.slice(
@@ -46,7 +50,21 @@ export default function MembersPage() {
     {/* Member Grid */}
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
     {currentMembers.map((member) => (
-      <div key={member.hash} className="bg-white border-2 border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all">
+      // 1. Logic check: Who gets the premium treatment?
+      const isPremium = ["Founder", "Chief Hops Officer", "Admin"].includes(member.role);
+
+      return (
+        <div
+        key={member.hash}
+        {/* 2. Added 'relative' and 'group' to handle the shine overlay */}
+        className={`bg-white border-2 rounded-xl p-6 shadow-sm hover:shadow-md transition-all relative group ${
+          isPremium ? 'border-[#FBB117]' : 'border-gray-200'
+        }`}
+        >
+        {/* 3. The Shine Overlay (Only for premium members) */}
+        {isPremium && (
+          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12 pointer-events-none z-20" />
+        )}
 
       {/* Avatar */}
       <div className="flex justify-center mb-4">
