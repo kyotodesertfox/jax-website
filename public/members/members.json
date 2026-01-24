@@ -3,48 +3,56 @@
         "hash": "fce3edd9e23f5fc7b7a6c18944e274a431b955e895e61a8ff07d988cea09ac12",
         "name": "Ward",
         "role": "Chief Hops Officer",
+        "isShiny": true,
         "joined": "2026-01-12"
     },
     {
         "hash": "086c33cdd1beb2021d2c5feea22b4298b4cf95ded2eaed0edb2c2ab9b0ecf2b6",
         "name": "David Chamberlain",
         "role": "Homebrewer",
+        "isShiny": false,
         "joined": "2026-01-11"
     },
     {
         "hash": "a014682d9ee1217075c874dd9dd3b5f8b14ab8db6be03b0c595fcd77e29fa9d6",
         "name": "Jeff K",
         "role": "Homebrewer",
+        "isShiny": false,
         "joined": "2025-12-04"
     },
     {
         "hash": "6a36ca48cba01f2024d5685f43ef84acaa17b2bf7896ac799615242464573d24",
         "name": "Buddy \ud83c\udf7a",
         "role": "Homebrewer",
+        "isShiny": false,
         "joined": "2025-12-02"
     },
     {
         "hash": "383fda3589dc420f713e2ffa38af4bae060211296ccec382234df3f14ba6a0e9",
         "name": "Justin",
         "role": "Fermentation Director",
+        "isShiny": false,
         "joined": "2025-11-28"
     },
     {
         "hash": "6c965dba20817010425a9a9925a72fef45089a1e3e58dde03c35d72da09588ab",
         "name": "Cormic1313",
         "role": "Homebrewer",
+        "isShiny": false,
         "joined": "2026-01-12"
     },
     {
         "hash": "5209da6645d03e64633ec10704b0c254866d2e5b6cf9eb8db99a2a660af73f6e",
         "name": "jgostage",
         "role": "Homebrewer",
+        "isShiny": false,
         "joined": "2025-11-28"
     },
     {
         "hash": "790af74c09922aa4f4e60351e49f45ce126ca4f634366d762f4c87d0abc1b8cb",
         "name": "Matt O",
         "role": "Chief Hops Officer",
+        "isShiny": true,
         "joined": "2025-11-29"
     }
 ]
