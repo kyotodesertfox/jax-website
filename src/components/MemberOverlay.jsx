@@ -16,7 +16,15 @@ export const ShinyOverlay = () => {
         <span className="absolute top-1/3 right-1/4 text-[#FBB117] text-xs animate-intense" style={{ '--speed': '2.2s', animationDelay: '1.5s' }}>✦</span>
 
         {/* The Extra "Pop" - A central glow that pulses */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#FBB117]/5 via-transparent to-[#FBB117]/10 animate-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#FBB117]/5 via-transparent to-[#FBB117]/10 animate-pulse" /></div>
+    );
+};
+
+export const IridescentOverlay = () => {
+    return (
+        <div className="absolute inset-0 pointer-events-none rounded-xl overflow-hidden z-30 opacity-30 group-hover:opacity-60 transition-opacity">
+        <div className="absolute inset-0 bg-[linear-gradient(110deg,#a2d2ff_0%,#efbbff_25%,#ffb7b2_50%,#cdffd8_75%,#a2d2ff_100%)] mix-blend-overlay animate-[pulse_3s_ease-in-out_infinite]" />
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] opacity-20" />
         </div>
     );
 };
