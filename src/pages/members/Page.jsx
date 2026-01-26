@@ -5,6 +5,7 @@ export default function MembersPage() {
   const [members, setMembers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const membersPerPage = 8;
+  const [hoveredMember, setHoveredMember] = useState(null);
 
   useEffect(() => {
     fetch('/members/members.json')
@@ -17,7 +18,7 @@ export default function MembersPage() {
   const totalPages = Math.ceil(members.length / membersPerPage);
   const currentMembers = members.slice(
     (currentPage - 1) * membersPerPage,
-                                       currentPage * membersPerPage
+    currentPage * membersPerPage
   );
 
   return (
@@ -46,51 +47,89 @@ export default function MembersPage() {
     {/* Member Grid */}
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
     {currentMembers.map((member) => (
-
+      /* 1. Perspective Wrapper - Required for 3D depth */
       <div
       key={member.hash}
-      className={`bg-white border-2 rounded-xl p-6 shadow-sm hover:shadow-md transition-all relative group ${member.isShiny ? 'border-[#FBB117]' : 'border-gray-200' }`}
+      className="bg-transparent h-[320px] [perspective:1000px]"
+      onMouseEnter={() => setHoveredMember(member.hash)}
+      onMouseLeave={() => setHoveredMember(null)}
+      onClick={() => setHoveredMember(hoveredMember === member.hash ? null : member.hash)}
+
       >
 
+      {/* 2. Inner Mover - Rotates based on hoveredMember state */}
+      <div className={`relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] ${hoveredMember === member.hash ? '[transform:rotateY(180deg)]' : ''}`}>
 
-      {/* Avatar */}
-      <div className="flex justify-center mb-4">
-      <div className="relative">
-      <img
-      src={`/members/icons/${member.hash}.png`}
-      alt="Member Icon"
-      onError={(e) => {
-        e.target.onerror = null;
-        e.target.src = `https://ui-avatars.com/api/?background=FBB117&color=000&name=${member.name}`;
-      }}
-      className="w-24 h-24 rounded-full border-4 border-[#FBB117] object-cover"
-      />
-      {member.role === 'Admin' && (
-        <div className="absolute bottom-0 right-0 bg-red-600 text-white p-1 rounded-full border-2 border-white">
-        <ShieldCheck size={14} />
+        {/* FRONT FACE */}
+        <div className="absolute inset-0 h-full w-full bg-white border-2 border-gray-200 rounded-xl p-6 shadow-sm [backface-visibility:hidden]">
+          {/* Avatar */}
+          <div className="flex justify-center mb-4">
+          <div className="relative">
+          <img
+          src={`/members/icons/${member.hash}.png`}
+          alt="Member Icon"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = `https://ui-avatars.com/api/?background=FBB117&color=000&name=${member.name}`;
+          }}
+          className="w-24 h-24 rounded-full border-4 border-[#FBB117] object-cover"
+          />
+          {member.role === 'Admin' && (
+            <div className="absolute bottom-0 right-0 bg-red-600 text-white p-1 rounded-full border-2 border-white">
+            <ShieldCheck size={14} />
+            </div>
+          )}
+          </div>
+          </div>
+
+          {/* Identity Info */}
+          <div className="text-center">
+          <h3 className="text-gray-900 font-black uppercase tracking-tight text-lg truncate">
+          {member.name}
+          </h3>
+          <div className="flex items-center justify-center gap-1 mt-1">
+          <Award size={14} className="text-[#FBB117]" />
+          <span className="text-xs font-bold uppercase text-gray-500">
+          {member.role}
+          </span>
+          </div>
+
+          {/* Industrial Metadata */}
+          <div className="mt-4 pt-4 border-t border-gray-100">
+          <div className="text-[9px] font-black text-gray-400 uppercase tracking-widest mt-1">
+          JOINED {member.joined}
+          </div>
+          </div>
+          </div>
         </div>
-      )}
-      </div>
-      </div>
 
-      {/* Identity Info */}
-      <div className="text-center">
-      <h3 className="text-gray-900 font-black uppercase tracking-tight text-lg truncate">
-      {member.name}
-      </h3>
-      <div className="flex items-center justify-center gap-1 mt-1">
-      <Award size={14} className="text-[#FBB117]" />
-      <span className="text-xs font-bold uppercase text-gray-500">
-      {member.role}
-      </span>
-      </div>
+        {/* BACK FACE - Shown when rotated */}
+        <div className="absolute inset-0 h-full w-full bg-gray-900 border-2 border-[#FBB117] rounded-xl p-6 shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col justify-center items-center text-center">
+          <h3 className="text-[#FBB117] font-black uppercase tracking-tight text-xl">
+            Member Profile
 
-      {/* Industrial Metadata */}
-      <div className="mt-4 pt-4 border-t border-gray-100">
-      <div className="text-[9px] font-black text-gray-400 uppercase tracking-widest mt-1">
-      JOINED {member.joined}
-      </div>
-      </div>
+          </h3>
+
+
+          <div className="mt-4 space-y-2">
+            <div className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Favorite Style</div>
+            <div className="text-white text-sm font-mono bg-gray-800 p-2 rounded border border-gray-700">
+            Login to Set
+            </div>
+          </div>
+
+
+          <div className="mt-4 space-y-2">
+          <div className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Favorite Beer</div>
+          <div className="text-white text-sm font-mono bg-gray-800 p-2 rounded border border-gray-700">
+          Login to Set
+          </div>
+          </div>
+
+          <div className="mt-6 text-[9px] text-gray-500 uppercase font-black">Status: <span className="text-green-500" > {member.status || 'Verified'}</span>
+          </div>
+        </div>
+
       </div>
       </div>
     ))}
