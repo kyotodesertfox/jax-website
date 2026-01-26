@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { User, ShieldCheck, Award, ChevronLeft, ChevronRight } from 'lucide-react';
 
+import { ShinyOverlay } from '/src/components/MemberOverlay';
+
 export default function MembersPage() {
   const [members, setMembers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -52,6 +54,7 @@ export default function MembersPage() {
       className={`bg-white border-2 rounded-xl p-6 shadow-sm hover:shadow-md transition-all relative group ${member.isShiny ? 'border-[#FBB117]' : 'border-gray-200' }`}
       >
 
+      {member.isShiny && <ShinyOverlay />}
 
       {/* Avatar */}
       <div className="flex justify-center mb-4">
