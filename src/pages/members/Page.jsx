@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { User, ShieldCheck, Award, ChevronLeft, ChevronRight } from 'lucide-react';
 
+
+import { CardFlip, ShinyOverlay, IridescentOverlay } from '/src/components/MemberOverlay';
+
+
 export default function MembersPage() {
   const [members, setMembers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -57,8 +61,13 @@ export default function MembersPage() {
 
       >
 
+
       {/* 2. Inner Mover - Rotates based on hoveredMember state */}
       <div className={`relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] ${hoveredMember === member.hash ? '[transform:rotateY(180deg)]' : ''}`}>
+
+      {member.isShiny && ( <>  <ShinyOverlay /> <IridescentOverlay /> </> )}
+
+
 
         {/* FRONT FACE */}
         <div className="absolute inset-0 h-full w-full bg-white border-2 border-gray-200 rounded-xl p-6 shadow-sm [backface-visibility:hidden]">
