@@ -1,5 +1,19 @@
 [
     {
+        "hash": "315486f996a5fcc9025ffb04d61ca8f4d0f0dc2440d888ca179d8f86e0423cf6",
+        "name": "dwhitin",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-01-31"
+    },
+    {
+        "hash": "6293bff085cc39405a0f1cb739ed43f29cbd2c15b7991b93b542944a854cff41",
+        "name": "Musicfiend",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-01-31"
+    },
+    {
         "hash": "fce3edd9e23f5fc7b7a6c18944e274a431b955e895e61a8ff07d988cea09ac12",
         "name": "Ward",
         "role": "Chief Hops Officer",
@@ -33,6 +47,13 @@
         "role": "Fermentation Director",
         "isShiny": false,
         "joined": "2025-11-28"
+    },
+    {
+        "hash": "aa9d2307ab3a4f8c4fbe4c72278da769f63393ea11a74285cd18e4dff6e41c18",
+        "name": "Mike Reilly",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-01-31"
     },
     {
         "hash": "6c965dba20817010425a9a9925a72fef45089a1e3e58dde03c35d72da09588ab",
