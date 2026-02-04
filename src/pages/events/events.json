@@ -1,13 +1,5 @@
 [
   {
-    "id": "1467699392294162453",
-    "url": "https://discord.com/events/1443949228526145549/1467699392294162453",
-    "app_url": "discord://-/events/1443949228526145549/1467699392294162453",
-    "name": "Club Meeting - Legacy Ale Works",
-    "startTime": "2026-02-04T23:30:00+00:00",
-    "location": "14965 Old St Augustine Rd suite 129-130, Jacksonville, FL 32258"
-  },
-  {
     "id": "1462907590181781661",
     "url": "https://discord.com/events/1443949228526145549/1462907590181781661",
     "app_url": "discord://-/events/1443949228526145549/1462907590181781661",
@@ -46,5 +38,13 @@
     "name": "2026 Hogtown Craft Beer Festival",
     "startTime": "2026-03-28T17:00:00+00:00",
     "location": "5201 NW 34th Blvd, Gainesville, FL 32605-1153, United States"
+  },
+  {
+    "id": "1463950641901867019",
+    "url": "https://discord.com/events/1443949228526145549/1463950641901867019",
+    "app_url": "discord://-/events/1443949228526145549/1463950641901867019",
+    "name": "2026 St Augustine Craft Brewers Festival",
+    "startTime": "2026-05-02T17:00:00+00:00",
+    "location": "11 Magnolia Ave, St. Augustine, FL 32084"
   }
 ]
