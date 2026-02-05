@@ -1,5 +1,19 @@
 [
     {
+        "hash": "ee0047f6d737cb12341aa504c3f5475ab1a3ba922d93c2c19502748395e7952c",
+        "name": "Jean",
+        "role": "@everyone",
+        "isShiny": false,
+        "joined": "2026-02-05"
+    },
+    {
+        "hash": "b00db0326ad125fb0398769d5f320731e4b577a8b909f6136df2b77e989ce7d7",
+        "name": "Matt",
+        "role": "@everyone",
+        "isShiny": false,
+        "joined": "2026-02-05"
+    },
+    {
         "hash": "5b163f58ae7587f68c7bad0ecc6a2387062a0bbcaf148fe3bdd4b852491ab4de",
         "name": "JohnS",
         "role": "Homebrewer",
