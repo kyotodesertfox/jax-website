@@ -2,7 +2,7 @@
     {
         "hash": "ee0047f6d737cb12341aa504c3f5475ab1a3ba922d93c2c19502748395e7952c",
         "name": "Jean",
-        "role": "@everyone",
+        "role": "Homebrewer",
         "isShiny": false,
         "joined": "2026-02-05"
     },
@@ -30,7 +30,7 @@
     {
         "hash": "03c3260a85aa110e5732558a5fa399be2d3c0bc2329fcf84dcd117952bea495c",
         "name": "Mike the mech",
-        "role": "@everyone",
+        "role": "Homebrewer",
         "isShiny": false,
         "joined": "2026-02-05"
     },
