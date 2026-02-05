@@ -1,5 +1,26 @@
 [
     {
+        "hash": "5b163f58ae7587f68c7bad0ecc6a2387062a0bbcaf148fe3bdd4b852491ab4de",
+        "name": "JohnS",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-02-05"
+    },
+    {
+        "hash": "809f037e41528a89310639328e582f8eed2f37781834fd2f43aa011f8866f387",
+        "name": "Rich",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-02-05"
+    },
+    {
+        "hash": "03c3260a85aa110e5732558a5fa399be2d3c0bc2329fcf84dcd117952bea495c",
+        "name": "Mike the mech",
+        "role": "@everyone",
+        "isShiny": false,
+        "joined": "2026-02-05"
+    },
+    {
         "hash": "315486f996a5fcc9025ffb04d61ca8f4d0f0dc2440d888ca179d8f86e0423cf6",
         "name": "dwhitin",
         "role": "Homebrewer",
@@ -89,5 +110,12 @@
         "role": "Homebrewer",
         "isShiny": false,
         "joined": "2026-01-24"
+    },
+    {
+        "hash": "b2b39fa748b7cfc718f3af172d203ba042e028e3b6a491d09f3143cdde6d634e",
+        "name": "murray3030",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-02-05"
     }
 ]
