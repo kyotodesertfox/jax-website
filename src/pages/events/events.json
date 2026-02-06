@@ -1,11 +1,11 @@
 [
   {
-    "id": "1462907590181781661",
-    "url": "https://discord.com/events/1443949228526145549/1462907590181781661",
-    "app_url": "discord://-/events/1443949228526145549/1462907590181781661",
-    "name": "Thirsty Thursday - The Block (Tentative)",
-    "startTime": "2026-02-19T23:00:00+00:00",
-    "location": "Vlg Xing Dr, Jacksonville, FL 32256"
+    "id": "1466577022112239769",
+    "url": "https://discord.com/events/1443949228526145549/1466577022112239769",
+    "app_url": "discord://-/events/1443949228526145549/1466577022112239769",
+    "name": "Thirsty Thursday - The Cavern (Tentative)",
+    "startTime": "2026-02-19T23:30:00+00:00",
+    "location": "9825 San Jose Blvd #18, Jacksonville, FL 32257"
   },
   {
     "id": "1467712143091695638",
@@ -24,14 +24,6 @@
     "location": "14965 Old St Augustine Rd suite 129-130, Jacksonville, FL 32258"
   },
   {
-    "id": "1466577022112239769",
-    "url": "https://discord.com/events/1443949228526145549/1466577022112239769",
-    "app_url": "discord://-/events/1443949228526145549/1466577022112239769",
-    "name": "Thirsty Thursday - The Cavern (Tentative)",
-    "startTime": "2026-03-12T22:30:00+00:00",
-    "location": "9825 San Jose Blvd #18, Jacksonville, FL 32257"
-  },
-  {
     "id": "1462899199661052116",
     "url": "https://discord.com/events/1443949228526145549/1462899199661052116",
     "app_url": "discord://-/events/1443949228526145549/1462899199661052116",
@@ -46,5 +38,13 @@
     "name": "2026 Hogtown Craft Beer Festival",
     "startTime": "2026-03-28T17:00:00+00:00",
     "location": "5201 NW 34th Blvd, Gainesville, FL 32605-1153, United States"
+  },
+  {
+    "id": "1462907590181781661",
+    "url": "https://discord.com/events/1443949228526145549/1462907590181781661",
+    "app_url": "discord://-/events/1443949228526145549/1462907590181781661",
+    "name": "Thirsty Thursday - The Block (Tentative)",
+    "startTime": "2026-04-16T22:00:00+00:00",
+    "location": "Vlg Xing Dr, Jacksonville, FL 32256"
   }
 ]
