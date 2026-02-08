@@ -5,15 +5,19 @@ import eventData from './events.json';
 export default function EventsPage() {
     return (
 
-        <div className="max-w-5xl mx-auto">
+        <div className="bg-gray-50 py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+
         {/* Header Section */}
-        <header className="mb-12 border-b-4 border-[#FBB117] pb-4">
-        <h1 className="text-5xl font-black text-gray-900 uppercase tracking-tighter">
+        <header className="mb-12 border-b-8 border-[#FBB117] pb-6 flex flex-col md:flex-row justify-between items-end">
+        <div className="w-full md:w-auto">
+        <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-gray-900">
         Upcoming <span className="text-[#FBB117]">Events</span>
         </h1>
-        <p className="text-gray-500 font-medium mt-2">
-        Automated sync from our Discord community.
+        <p className="text-gray-600 font-bold mt-2 uppercase tracking-widest text-sm italic">
+        What we are doing in the community
         </p>
+        </div>
         </header>
 
         {/* The Events Container */}
@@ -72,6 +76,7 @@ export default function EventsPage() {
             <p className="text-gray-400 text-lg font-medium">No events currently scheduled. Check back soon!</p>
             </div>
         )}
+        </div>
         </div>
         </div>
 

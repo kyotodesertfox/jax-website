@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { User, ShieldCheck, Award, ChevronLeft, ChevronRight } from 'lucide-react';
 
-export default function MembersPage() {
-    const [members, setMembers] = useState([]);
-    const [currentPage, setCurrentPage] = useState(1);
-    const membersPerPage = 8;
+export default function RecipesPage() {
 
     return (
         <div className="bg-gray-50 py-12 px-4">
@@ -22,8 +19,8 @@ export default function MembersPage() {
         </div>
         </header>
 
-        {/* Member Grid */}
-        <div className="p-0 text-center font-black"><img src={`${import.meta.env.BASE_URL}coming-soon.png`} className="w-full max-w-lg mx-auto" /></div>
+        <div className="p-0 text-center font-black"><img src={`${import.meta.env.BASE_URL}coming-soon.png`} className="w-full max-w-lg mx-auto" />
+        </div>
 
 
         </div>
