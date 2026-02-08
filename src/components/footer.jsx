@@ -19,7 +19,7 @@ export default function Footer() {
         </h3>
         <div className="flex gap-6 text-2xl">
 
-        <a href="https://discord.gg/qyvXEJuV4" className="hover:text-[#FBB117] transition-colors" title="Discord">
+        <a href="https://discord.gg/PbSrfDNDP3" className="hover:text-[#FBB117] transition-colors" title="Discord">
         <span>👾</span>
         </a>
         <a href="https://instagram.com/jacksonvillealeexchange/" className="hover:text-[#FBB117] transition-colors" title="Instagram">
