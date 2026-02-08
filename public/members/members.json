@@ -1,5 +1,61 @@
 [
     {
+        "hash": "ee0047f6d737cb12341aa504c3f5475ab1a3ba922d93c2c19502748395e7952c",
+        "name": "Jean",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-02-05"
+    },
+    {
+        "hash": "b00db0326ad125fb0398769d5f320731e4b577a8b909f6136df2b77e989ce7d7",
+        "name": "Matt",
+        "role": "@everyone",
+        "isShiny": false,
+        "joined": "2026-02-05"
+    },
+    {
+        "hash": "5b163f58ae7587f68c7bad0ecc6a2387062a0bbcaf148fe3bdd4b852491ab4de",
+        "name": "JohnS",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-02-05"
+    },
+    {
+        "hash": "809f037e41528a89310639328e582f8eed2f37781834fd2f43aa011f8866f387",
+        "name": "Rich",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-02-05"
+    },
+    {
+        "hash": "03c3260a85aa110e5732558a5fa399be2d3c0bc2329fcf84dcd117952bea495c",
+        "name": "Mike the Mech",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-02-05"
+    },
+    {
+        "hash": "548a410f0621000b01ec08938ae890c93e3630e5f8e43fb0309abd5219c5d489",
+        "name": "Tye Fletcher",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-02-05"
+    },
+    {
+        "hash": "315486f996a5fcc9025ffb04d61ca8f4d0f0dc2440d888ca179d8f86e0423cf6",
+        "name": "dwhitin",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-01-31"
+    },
+    {
+        "hash": "6293bff085cc39405a0f1cb739ed43f29cbd2c15b7991b93b542944a854cff41",
+        "name": "Chris B",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-01-31"
+    },
+    {
         "hash": "fce3edd9e23f5fc7b7a6c18944e274a431b955e895e61a8ff07d988cea09ac12",
         "name": "Ward",
         "role": "Chief Hops Officer",
@@ -35,6 +91,27 @@
         "joined": "2025-11-28"
     },
     {
+        "hash": "a2e78b2db598fb74ccc390b57e509c15be1dde6b439c75804411dc1add1c5212",
+        "name": "Daniel",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-01-31"
+    },
+    {
+        "hash": "04af2ca4e31a2da01f1a6c68fa3c6a981eace781abcf3d26cbe7180a76e4f8d8",
+        "name": "JoecuttJj",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-02-05"
+    },
+    {
+        "hash": "aa9d2307ab3a4f8c4fbe4c72278da769f63393ea11a74285cd18e4dff6e41c18",
+        "name": "Mike Reilly",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-01-31"
+    },
+    {
         "hash": "6c965dba20817010425a9a9925a72fef45089a1e3e58dde03c35d72da09588ab",
         "name": "Cormic1313",
         "role": "Homebrewer",
@@ -61,5 +138,12 @@
         "role": "Homebrewer",
         "isShiny": false,
         "joined": "2026-01-24"
+    },
+    {
+        "hash": "b2b39fa748b7cfc718f3af172d203ba042e028e3b6a491d09f3143cdde6d634e",
+        "name": "murray3030",
+        "role": "Homebrewer",
+        "isShiny": false,
+        "joined": "2026-02-05"
     }
 ]
