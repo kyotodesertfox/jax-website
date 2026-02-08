@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from './components/layout';
+import CallbackPage from '/src/pages/callback/Page';
 
 // This looks for any file ending in 'Page.jsx' inside the pages directory
 const pages = import.meta.glob('./pages/**/*Page.jsx', { eager: true });
@@ -29,6 +30,9 @@ export default function App() {
     {/* The 404 "Kicked Keg" Safety Net */}
     <Route path="*" element={<div className="p-20 text-center font-black"><img src={`${import.meta.env.BASE_URL}404.png`} className="w-full max-w-lg mx-auto" /></div>} />
     </Route>
+
+    <Route path="/callback" element={<CallbackPage />} />
+
     </Routes>
     </BrowserRouter>
   );

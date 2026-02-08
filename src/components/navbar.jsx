@@ -4,8 +4,24 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-
     const closeMenu = () => setIsOpen(false);
+
+    const handleLogin = () => {
+        // 1. Assign the variable using the Vite-specific syntax
+        const CLIENT_ID = import.meta.env.VITE_DISCORD_CLIENT_ID;
+
+        // 2. Add a quick check to make sure it's actually loading
+        if (!CLIENT_ID) {
+            console.error("VITE_DISCORD_CLIENT_ID is undefined. Check your .env file!");
+            return;
+        }
+
+        const REDIRECT_URI = encodeURIComponent("http://192.168.12.3:5173/callback");
+        const SCOPES = "identify email";
+        const authUrl = `https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code&scope=${SCOPES}`;
+
+        window.location.href = authUrl;
+    };
 
     return (
         <nav className="sticky top-0 z-50 bg-beer-dark border-b-2 border-beer-amber shadow-2xl">
@@ -22,24 +38,32 @@ export default function Navbar() {
         </span>
         </Link>
 
-        {/* NAV LINKS (DESKTOP) */}
-        <div className="hidden md:flex items-center gap-8">
-        {/* Note: I reverted these classes to your original styling */}
+        {/* RIGHT CLUSTER (DESKTOP) */}
+        <div className="hidden md:flex items-center gap-6">
+        {/* NAV LINKS - Shifted left by the margin-right on this div */}
+        <div className="flex items-center gap-6 mr-4">
         <NavLink to="/recipes" icon={<FlaskConical size={18}/>} label="Recipes" />
         <NavLink to="/events" icon={<Calendar size={18}/>} label="Events" />
         <NavLink to="/members" icon={<User size={18}/>} label="Members" />
+        </div>
 
-        <button className="bg-beer-gold hover:bg-white text-beer-dark px-4 py-2 rounded-full font-bold text-sm transition-colors">
+        {/* BUTTONS GROUP */}
+        <div className="flex items-center gap-3">
+        <button onClick={handleLogin}
+        className="text-beer-gold border border-beer-gold hover:bg-beer-gold hover:text-beer-dark px-4 py-2 rounded-full font-bold text-xs transition-all whitespace-nowrap"
+        >
+        MEMBER LOGIN
+        </button>
+
+        <button className="bg-beer-gold hover:bg-white text-beer-dark px-4 py-2 rounded-full font-bold text-xs transition-colors whitespace-nowrap">
         JOIN CLUB
         </button>
+        </div>
         </div>
 
         {/* HAMBURGER (MOBILE ONLY) */}
         <div className="md:hidden flex items-center">
-        <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="text-beer-gold focus:outline-none p-2"
-        >
+        <button onClick={() => setIsOpen(!isOpen)} className="text-beer-gold focus:outline-none p-2">
         {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
         </div>
@@ -53,7 +77,14 @@ export default function Navbar() {
         <MobileNavLink to="/events" icon={<Calendar size={20} />} label="Events" onClick={closeMenu} />
         <MobileNavLink to="/members" icon={<User size={20} />} label="Members" onClick={closeMenu} />
 
-        <div className="pt-4 px-3">
+        <div className="pt-4 px-3 space-y-3">
+        <Link
+        to="/portal"
+        onClick={closeMenu}
+        className="block w-full text-center border border-beer-gold text-beer-gold py-3 rounded-xl font-bold"
+        >
+        MEMBER PORTAL
+        </Link>
         <button className="w-full bg-beer-gold text-beer-dark py-3 rounded-xl font-bold">
         JOIN CLUB
         </button>
@@ -64,7 +95,6 @@ export default function Navbar() {
     );
 }
 
-/* Reverted to your EXACT original desktop styles */
 function NavLink({ to, icon, label }) {
     return (
         <Link to={to} className="flex items-center gap-2 text-gray-300 hover:text-beer-gold transition-colors font-semibold text-sm">
@@ -76,11 +106,7 @@ function NavLink({ to, icon, label }) {
 
 function MobileNavLink({ to, icon, label, onClick }) {
     return (
-        <Link
-        to={to}
-        onClick={onClick}
-        className="flex items-center gap-4 text-gray-300 hover:text-beer-gold p-3 rounded-lg font-bold text-lg"
-        >
+        <Link to={to} onClick={onClick} className="flex items-center gap-4 text-gray-300 hover:text-beer-gold p-3 rounded-lg font-bold text-lg">
         <div className="text-beer-gold">{icon}</div>
         {label}
         </Link>
