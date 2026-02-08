@@ -6,20 +6,6 @@ export default function MembersPage() {
     const [currentPage, setCurrentPage] = useState(1);
     const membersPerPage = 8;
 
-    useEffect(() => {
-        fetch('/members/members.json')
-        .then(res => res.json())
-        .then(data => setMembers(data))
-        .catch(err => console.error("Roster error:", err));
-    }, []);
-
-    // Pagination Logic
-    const totalPages = Math.ceil(members.length / membersPerPage);
-    const currentMembers = members.slice(
-        (currentPage - 1) * membersPerPage,
-                                         currentPage * membersPerPage
-    );
-
     return (
         <div className="bg-gray-50 py-12 px-4">
         <div className="max-w-6xl mx-auto">
